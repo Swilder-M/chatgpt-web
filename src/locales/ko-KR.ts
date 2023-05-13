@@ -72,6 +72,9 @@ export default {
     httpsProxy: 'HTTPS 프록시',
     balance: 'API 잔액',
     monthlyUsage: '월 사용량',
+    availableServerCount: '사용 가능한 서버 수',
+    minTimeout: '최소 타임아웃',
+    avgTimeout: '평균 타임아웃',
   },
   store: {
     siderButton: '프롬프트 저장소',

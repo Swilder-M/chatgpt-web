@@ -72,6 +72,9 @@ export default {
     httpsProxy: 'HTTPS Proxy',
     balance: 'API Balance',
     monthlyUsage: 'Monthly Usage',
+    availableServerCount: 'Available Server Count',
+    minTimeout: 'Min Timeout',
+    avgTimeout: 'Avg Timeout',
   },
   store: {
     siderButton: 'Prompt Store',

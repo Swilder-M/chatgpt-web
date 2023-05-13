@@ -72,6 +72,9 @@ export default {
     httpsProxy: 'HTTPS-прокси',
     balance: 'Баланс API',
     monthlyUsage: 'Ежемесячное использование',
+    availableServerCount: 'Доступное количество серверов',
+    minTimeout: 'Минимальное время ожидания',
+    avgTimeout: 'Среднее время ожидания',
   },
   store: {
     siderButton: 'Хранилище подсказок',

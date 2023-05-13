@@ -12,6 +12,9 @@ interface ConfigState {
   socksProxy?: string
   httpsProxy?: string
   usage?: string
+  availableServerCount?: string
+  minTimeout?: string
+  avgTimeout?: string
 }
 
 const authStore = useAuthStore()
@@ -59,6 +62,9 @@ onMounted(() => {
           后端为作者自行实现，仅提供学习使用，不提供任何付费服务。
         </p>
       </div>
+      <p>{{ $t("setting.availableServerCount") }}：{{ config?.availableServerCount ?? '0/0' }}</p>
+      <p>{{ $t("setting.minTimeout") }}：{{ config?.minTimeout ?? '-' }}</p>
+      <p>{{ $t("setting.avgTimeout") }}：{{ config?.avgTimeout ?? '-' }}</p>
       <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
       <p v-if="isChatGPTAPI">
         {{ $t("setting.monthlyUsage") }}：{{ config?.usage ?? '-' }}
