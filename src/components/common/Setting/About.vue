@@ -6,12 +6,6 @@ import pkg from '@/../package.json'
 import { useAuthStore } from '@/store'
 
 interface ConfigState {
-  timeoutMs?: number
-  reverseProxy?: string
-  apiModel?: string
-  socksProxy?: string
-  httpsProxy?: string
-  usage?: string
   availableServerCount?: string
   minTimeout?: string
   avgTimeout?: string
@@ -65,16 +59,6 @@ onMounted(() => {
       <p>{{ $t("setting.availableServerCount") }}：{{ config?.availableServerCount ?? '0/0' }}</p>
       <p>{{ $t("setting.minTimeout") }}：{{ config?.minTimeout ?? '-' }}</p>
       <p>{{ $t("setting.avgTimeout") }}：{{ config?.avgTimeout ?? '-' }}</p>
-      <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
-      <p v-if="isChatGPTAPI">
-        {{ $t("setting.monthlyUsage") }}：{{ config?.usage ?? '-' }}
-      </p>
-      <p v-if="!isChatGPTAPI">
-        {{ $t("setting.reverseProxy") }}：{{ config?.reverseProxy ?? '-' }}
-      </p>
-      <p>{{ $t("setting.timeout") }}：{{ config?.timeoutMs ?? '-' }}</p>
-      <p>{{ $t("setting.socks") }}：{{ config?.socksProxy ?? '-' }}</p>
-      <p>{{ $t("setting.httpsProxy") }}：{{ config?.httpsProxy ?? '-' }}</p>
     </div>
   </NSpin>
 </template>
